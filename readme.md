@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/ublaboo/api-router-project/v/stable)](https://packagist.org/packages/ublaboo/api-router-project)
+[![License](https://poser.pugx.org/ublaboo/api-router-project/license)](https://packagist.org/packages/ublaboo/api-router-project)
+[![Total Downloads](https://poser.pugx.org/ublaboo/api-router-project/downloads)](https://packagist.org/packages/ublaboo/api-router-project)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ublaboo/help)
+
 # ApiRouter Example Project
 
 This repository is meant as a starter project for [ublaboo/api-router](https://github.com/ublaboo/api-router).
