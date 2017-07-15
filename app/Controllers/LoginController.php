@@ -23,10 +23,8 @@ use Ublaboo\ApiRouter\ApiRoute;
  */
 final class LoginController extends AbstractController
 {
-
 	public function run(Request $request): IResponse
 	{
 		return new ApiResponse($this->apiResponseFormatter->formatMessage('Hello'));
 	}
-
 }

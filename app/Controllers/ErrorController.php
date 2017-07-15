@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Http\ApiResponse;
-use Nette\Application\BadRequestException;
 use Nette\Application\IResponse;
 use Nette\Application\Request;
 
 final class ErrorController extends AbstractController
 {
-
 	public function run(Request $request): IResponse
 	{
 		$exception = $request->getParameter('exception');
@@ -22,5 +20,4 @@ final class ErrorController extends AbstractController
 
 		return new ApiResponse($this->apiResponseFormatter->formatException($exception));
 	}
-
 }

@@ -20,5 +20,4 @@ abstract class AbstractController implements IPresenter
 	{
 		$this->apiResponseFormatter = $apiResponseFormatter;
 	}
-
 }
