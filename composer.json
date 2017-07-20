@@ -24,7 +24,7 @@
 		"nette/security": "^2.4",
 		"nette/utils": "^2.4",
 		"tracy/tracy": "^2.4",
-		"ublaboo/api-router": "^1.2"
+		"ublaboo/api-router": "~2.0.0"
 	},
 	"require-dev": {
 		"nette/tester": "^1.6"
