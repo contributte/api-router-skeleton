@@ -14,8 +14,9 @@ PHP 7.1 or higher.
 
 ## ublaboo/api-router-project usage
 
-	composer create-project ublaboo/api-router-project
-
+```bash
+composer create-project ublaboo/api-router-project
+```
 
 ## Long Story Short
 
