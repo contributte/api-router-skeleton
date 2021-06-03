@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace App\Http;
 
-
 final class ApiResponseFormatter
 {
+
+	/**
+	 * @return mixed[]
+	 */
 	public function formatMessage(string $message): array
 	{
 		return [
@@ -17,7 +20,10 @@ final class ApiResponseFormatter
 		];
 	}
 
-
+	/**
+	 * @param mixed[] $payload
+	 * @return mixed[]
+	 */
 	public function formatPayload(array $payload): array
 	{
 		return [
@@ -26,7 +32,9 @@ final class ApiResponseFormatter
 		];
 	}
 
-
+	/**
+	 * @return mixed[]
+	 */
 	public function formatException(\Exception $e): array
 	{
 		return [

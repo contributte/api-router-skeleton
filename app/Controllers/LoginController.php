@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Http\ApiResponse;
+use Contributte\ApiRouter\ApiRoute;
 use Nette\Application\IResponse;
 use Nette\Application\Request;
-use Ublaboo\ApiRouter\ApiRoute;
+use Nette\Application\Responses\JsonResponse;
 
 /**
  * API for logging users in
- * 
+ *
  * @ApiRoute(
  * 	"/api/login",
  * 	methods={
@@ -25,6 +25,6 @@ final class LoginController extends AbstractController
 {
 	public function run(Request $request): IResponse
 	{
-		return new ApiResponse($this->apiResponseFormatter->formatMessage('Hello'));
+		return new JsonResponse($this->apiResponseFormatter->formatMessage('Hello'));
 	}
 }
