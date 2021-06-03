@@ -18,28 +18,46 @@
 Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://f3l1x.io">f3l1x.io</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
 </p>
 
-## Documentation
+<p align=center>
+	<img src="https://api.microlink.io?url=https%3A%2F%2Fexamples.contributte.org%2Fapi-router-skeleton%2F&overlay.browser=light&screenshot=true&meta=false&embed=screenshot.url"></img>
+</p>
 
-### ublaboo/api-router-project usage
+-----
 
-```bash
-composer create-project ublaboo/api-router-project
+## Goal
+
+Main goal is to provide skeleton for [contributte/api-router](https://github.com/contributte/api-router) library.
+
+Focused on:
+
+- latest PHP 7.4 & 8.0
+- `nette/*` packages
+
+## Demo
+
+https://examples.contributte.org/api-router-skeleton/
+
+## Installation
+
+To install latest version of `contributte/api-router-skeleton` use [Composer](https://getcomposer.com).
+
+```
+composer create-project -s dev contributte/api-router-skeleton acme
 ```
 
-### Long Story Short
+Start PHP development server via `make dev`.
 
-- Using `ublaboo/api-router` for routing
+And take a look at:
+
+- [GET] http://localhost:8000/api/ping
+- [POST] http://localhost:8000/api/login
+
+## Get Started
+
+- Using `contributte/api-router` for routing
 - Implementing `IPresenter` in endpoints (`App\Controllers\LoginController`) instead of extending `UI\Presenter`
 - Extending `ApiResponse` from Nette `JsonResponse`, just to make it more simple to add more custom headers and so on
 - `LoginController` and `ErrorController` is using `ApiResponseFormatter` for formatting succes message, payload data or and exception
-
-
-## Versions
-
-| State       | Version      | Branch   | Nette  | PHP     |
-|-------------|--------------|----------|--------|---------|
-| dev         | `dev-master` | `master` | `2.4 ` | `^7.1`  |
-| stable      | `^1.1.0`     | `master` | `2.4 ` | `^7.1`  | 
 
 ## Development
 

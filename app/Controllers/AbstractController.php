@@ -10,11 +10,7 @@ use Nette\Application\IPresenter;
 abstract class AbstractController implements IPresenter
 {
 
-	/**
-	 * @var ApiResponseFormatter
-	 */
-	protected $apiResponseFormatter;
-
+	protected ApiResponseFormatter $apiResponseFormatter;
 
 	public function __construct(ApiResponseFormatter $apiResponseFormatter)
 	{

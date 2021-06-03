@@ -10,8 +10,6 @@ final class RouterFactory
 {
 	public function create(): RouteList
 	{
-		$router = new RouteList;
-
-		return $router;
+		return new RouteList;
 	}
 }
