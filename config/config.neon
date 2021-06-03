@@ -1,5 +1,5 @@
 extensions:
-	apiRouter: Ublaboo\ApiRouter\DI\ApiRouterExtension
+	apiRouter: Contributte\ApiRouter\DI\ApiRouterExtension
 
 
 parameters:
@@ -19,8 +19,10 @@ session:
 services:
 	- App\Http\ApiResponseFormatter
 	- App\Routing\RouterFactory
+
 	router: @App\Routing\RouterFactory::create
 
 	# Api endpoints
 	#
 	- App\Controllers\LoginController
+	- App\Controllers\PingController
