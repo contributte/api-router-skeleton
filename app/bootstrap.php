@@ -11,10 +11,10 @@ $configurator = new ExtraConfigurator();
 // According to NETTE_DEBUG env
 $configurator->setEnvDebugMode();
 
-$configurator->enableTracy(__DIR__ . '/../log');
+$configurator->enableTracy(__DIR__ . '/../var/log');
 
 $configurator->setTimeZone('Europe/Prague');
-$configurator->setTempDirectory(__DIR__ . '/../temp');
+$configurator->setTempDirectory(__DIR__ . '/../var/tmp');
 
 $configurator->addConfig(__DIR__ . '/../config/config.neon');
 
