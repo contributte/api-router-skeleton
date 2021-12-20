@@ -17,6 +17,7 @@ abstract class BaseContainerTestCase extends BaseTestCase
 
 	protected function getService(string $class): object
 	{
+		/** @var class-string $class */
 		if (strpos($class, '\\')) {
 			return $this->container->getByType($class);
 		} else {
