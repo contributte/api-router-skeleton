@@ -9,14 +9,6 @@ project: install setup
 install:
 	composer install
 
-setup:
-	mkdir -p var/{tmp,log}
-	chmod +0777 var/{tmp,log}
-
-############################################################
-# DEVELOPMENT ##############################################
-############################################################
-
 qa: cs phpstan
 
 cs:
