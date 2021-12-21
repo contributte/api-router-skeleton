@@ -8,6 +8,7 @@ use Nette\Application\Routers\RouteList;
 
 final class RouterFactory
 {
+
 	public function create(): RouteList
 	{
 		return new RouteList;

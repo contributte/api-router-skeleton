@@ -12,6 +12,7 @@ use Tracy\ILogger;
 
 final class ErrorController extends AbstractController
 {
+
 	public function run(Request $request): IResponse
 	{
 		$exception = $request->getParameter('exception');

@@ -23,6 +23,7 @@ use Nette\Application\Responses\JsonResponse;
  */
 final class LoginController extends AbstractController
 {
+
 	public function run(Request $request): IResponse
 	{
 		return new JsonResponse($this->apiResponseFormatter->formatMessage('Hello'));

@@ -23,6 +23,7 @@ use Nette\Application\Responses\TextResponse;
  */
 final class PingController extends AbstractController
 {
+
 	public function run(Request $request): IResponse
 	{
 		return new TextResponse('pong');
