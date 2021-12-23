@@ -3,4 +3,6 @@ includes:
 	- vendor/phpstan/phpstan-nette/rules.neon
 
 parameters:
+	level: 8
+
 	ignoreErrors:
