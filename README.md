@@ -30,7 +30,7 @@ Main goal is to provide skeleton for [contributte/api-router](https://github.com
 
 Focused on:
 
-- latest PHP 7.4 & 8.0
+- latest PHP 8.0
 - `nette/*` packages
 
 ## Demo
