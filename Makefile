@@ -13,8 +13,8 @@ setup:
 	chmod +0777 temp log
 
 clean:
-	find temp -mindepth 1 ! -name '.gitignore' -type f -or -type d -exec rm -rf {} +
-	find log -mindepth 1 ! -name '.gitignore' -type f -or -type d -exec rm -rf {} +
+	find temp -mindepth 1 ! -name '.gitignore' -type f,d -exec rm -rf {} +
+	find log -mindepth 1 ! -name '.gitignore' -type f,d -exec rm -rf {} +
 
 ############################################################
 # DEVELOPMENT ##############################################
