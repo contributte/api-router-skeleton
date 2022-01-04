@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0efb033572cdc3c19a28d0d32ca1643",
+    "content-hash": "adefd206171d47a4003b6d84bce17a88",
     "packages": [
         {
             "name": "contributte/api-router",
@@ -370,12 +370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/http.git",
-                "reference": "81906679750750f1062d2f96c56074cd49d2370c"
+                "reference": "fdc7016d2e5318e8acc67cb386fb5713d008fd59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/http/zipball/81906679750750f1062d2f96c56074cd49d2370c",
-                "reference": "81906679750750f1062d2f96c56074cd49d2370c",
+                "url": "https://api.github.com/repos/contributte/http/zipball/fdc7016d2e5318e8acc67cb386fb5713d008fd59",
+                "reference": "fdc7016d2e5318e8acc67cb386fb5713d008fd59",
                 "shasum": ""
             },
             "require": {
@@ -386,10 +386,10 @@
                 "nette/di": "^3.0.0",
                 "ninjify/nunjuck": "^0.4",
                 "ninjify/qa": "^0.12",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-deprecation-rules": "^0.12",
-                "phpstan/phpstan-nette": "^0.12",
-                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-nette": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
                 "tracy/tracy": "^2.5.1"
             },
             "suggest": {
@@ -441,7 +441,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-28T10:50:26+00:00"
+            "time": "2021-12-23T19:55:55+00:00"
         },
         {
             "name": "contributte/security",
@@ -595,16 +595,16 @@
         },
         {
             "name": "contributte/utils",
-            "version": "v0.5.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/utils.git",
-                "reference": "8cd55a7d560f65c671bf19bb1a60327170abcd76"
+                "reference": "188f745adb9dc72bfb775d383b8c308d62272ce4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/utils/zipball/8cd55a7d560f65c671bf19bb1a60327170abcd76",
-                "reference": "8cd55a7d560f65c671bf19bb1a60327170abcd76",
+                "url": "https://api.github.com/repos/contributte/utils/zipball/188f745adb9dc72bfb775d383b8c308d62272ce4",
+                "reference": "188f745adb9dc72bfb775d383b8c308d62272ce4",
                 "shasum": ""
             },
             "require": {
@@ -616,13 +616,12 @@
             },
             "require-dev": {
                 "nette/di": "~3.0.0",
-                "ninjify/nunjuck": "^0.3.0",
-                "ninjify/qa": "^0.10.0",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^0.11",
-                "phpstan/phpstan-nette": "^0.11",
-                "phpstan/phpstan-shim": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11"
+                "ninjify/nunjuck": "^0.4.0",
+                "ninjify/qa": "^0.12.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-nette": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0"
             },
             "suggest": {
                 "nette/di": "to use DateTimeExtension[CompilerExtension]"
@@ -630,7 +629,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.5.x-dev"
+                    "dev-master": "0.6.x-dev"
                 }
             },
             "autoload": {
@@ -659,9 +658,19 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/utils/issues",
-                "source": "https://github.com/contributte/utils/tree/v0.5.0"
+                "source": "https://github.com/contributte/utils/tree/v0.5.1"
             },
-            "time": "2020-12-11T11:13:16+00:00"
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-12-29T16:32:43+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2511,16 +2520,16 @@
         },
         {
             "name": "ninjify/qa",
-            "version": "v0.12.1",
+            "version": "v0.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ninjify/qa.git",
-                "reference": "a43584b9286d8f274f099baf9302bf54e11474d9"
+                "reference": "76a0b4393a8b4f39abdaf8dc6b068a7744e62883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ninjify/qa/zipball/a43584b9286d8f274f099baf9302bf54e11474d9",
-                "reference": "a43584b9286d8f274f099baf9302bf54e11474d9",
+                "url": "https://api.github.com/repos/ninjify/qa/zipball/76a0b4393a8b4f39abdaf8dc6b068a7744e62883",
+                "reference": "76a0b4393a8b4f39abdaf8dc6b068a7744e62883",
                 "shasum": ""
             },
             "require": {
@@ -2561,7 +2570,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ninjify/qa/issues",
-                "source": "https://github.com/ninjify/qa/tree/v0.12.1"
+                "source": "https://github.com/ninjify/qa/tree/v0.12.2"
             },
             "funding": [
                 {
@@ -2573,7 +2582,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-01T14:13:38+00:00"
+            "time": "2021-12-27T16:52:05+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -3096,5 +3105,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
