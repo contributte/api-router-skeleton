@@ -11,6 +11,6 @@ final class RouterFactory
 
 	public function create(): RouteList
 	{
-		return new RouteList;
+		return new RouteList();
 	}
 }
