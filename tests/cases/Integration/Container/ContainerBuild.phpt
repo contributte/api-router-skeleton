@@ -1,8 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-
-namespace Tests\Integration\Container;
+namespace Tests\Cases\Integration\Container;
 
 use Nette\Configurator;
 use Nette\DI\Container;

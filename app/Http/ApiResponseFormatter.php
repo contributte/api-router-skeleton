@@ -1,8 +1,8 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App\Http;
+
+use Throwable;
 
 final class ApiResponseFormatter
 {
@@ -35,7 +35,7 @@ final class ApiResponseFormatter
 	/**
 	 * @return mixed[]
 	 */
-	public function formatException(\Exception $e): array
+	public function formatException(Throwable $e): array
 	{
 		return [
 			'status' => 'error',
@@ -43,4 +43,5 @@ final class ApiResponseFormatter
 			'message' => $e->getMessage(),
 		];
 	}
+
 }

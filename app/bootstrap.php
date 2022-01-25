@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 use Contributte\Bootstrap\ExtraConfigurator;
 
@@ -22,6 +20,4 @@ if (file_exists(__DIR__ . '/../config/config.local.neon')) {
 	$configurator->addConfig(__DIR__ . '/../config/config.local.neon');
 }
 
-$container = $configurator->createContainer();
-
-return $container;
+return $configurator->createContainer();

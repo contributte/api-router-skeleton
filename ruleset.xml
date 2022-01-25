@@ -2,6 +2,12 @@
 <ruleset name="Contributte">
 
 	<!-- Extending rulesets -->
+	<rule ref="./vendor/ninjify/coding-standard/ruleset.xml">
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidTypeHint"/>
+		<exclude name="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator.TernaryOperatorNotUsed"/>
+		<exclude name="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable.DisallowedSuperGlobalVariable"/>
+	</rule>
+
 	<rule ref="./vendor/contributte/code-rules/paveljanda/ruleset.xml"/>
 
 	<!-- Specific rules -->
@@ -9,15 +15,13 @@
 		<properties>
 			<property name="rootNamespaces" type="array">
 				<element key="app" value="App"/>
-				<element key="tests/toolkit" value="Tests\Toolkit"/>
 				<element key="tests/cases" value="Tests\Cases"/>
+				<element key="tests/toolkit" value="Tests\Toolkit"/>
 			</property>
 		</properties>
 	</rule>
 
 	<!-- Exclude folders -->
-	<exclude-pattern>/app/bootstrap.php</exclude-pattern>
-	<exclude-pattern>/tests/toolkit</exclude-pattern>
 	<exclude-pattern>/tests/tmp</exclude-pattern>
 	<exclude-pattern>*.phtml</exclude-pattern>
 </ruleset>

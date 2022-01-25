@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App\Controllers;
 
@@ -28,4 +26,5 @@ final class PingController extends AbstractController
 	{
 		return new TextResponse('pong');
 	}
+
 }
