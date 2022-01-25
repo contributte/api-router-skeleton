@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Tests\Toolkit;
 
@@ -116,5 +118,4 @@ class Environment
 
 		THelpers::purge($dir);
 	}
-
 }

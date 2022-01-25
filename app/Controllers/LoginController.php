@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Controllers;
 
@@ -26,5 +28,4 @@ final class LoginController extends AbstractController
 	{
 		return new JsonResponse($this->apiResponseFormatter->formatMessage('Hello'));
 	}
-
 }

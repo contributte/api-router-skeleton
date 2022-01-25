@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Tests\Toolkit\Nette;
 
@@ -8,7 +10,9 @@ use Nette\Security\UserStorage;
 final class DummyUserStorage implements UserStorage
 {
 
-	/** @var IIdentity|NULL */
+	/**
+	 * @var IIdentity|NULL
+	 */
 	private $identity;
 
 	public function saveAuthentication(IIdentity $identity): void
@@ -34,5 +38,4 @@ final class DummyUserStorage implements UserStorage
 	{
 		return $this;
 	}
-
 }

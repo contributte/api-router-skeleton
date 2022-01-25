@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Tests\Toolkit\TestCase;
 
@@ -7,7 +9,9 @@ use Nette\DI\Container;
 abstract class BaseContainerTestCase extends BaseTestCase
 {
 
-	/** @var Container */
+	/**
+	 * @var Container
+	 */
 	protected $container;
 
 	public function __construct(Container $container)
@@ -26,5 +30,4 @@ abstract class BaseContainerTestCase extends BaseTestCase
 
 		return $this->container->getService($class);
 	}
-
 }
