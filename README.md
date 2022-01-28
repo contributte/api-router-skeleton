@@ -39,7 +39,7 @@ https://examples.contributte.org/api-router-skeleton/
 
 ## Installation
 
-To install latest version of `contributte/api-router-skeleton` use [Composer](https://getcomposer.com).
+To install latest version of `contributte/api-router-skeleton` use [Composer](https://getcomposer.org).
 
 ```
 composer create-project -s dev contributte/api-router-skeleton acme
