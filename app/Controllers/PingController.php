@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use Contributte\ApiRouter\ApiRoute;
-use Nette\Application\IResponse;
 use Nette\Application\Request;
+use Nette\Application\Response;
 use Nette\Application\Responses\TextResponse;
 
 /**
@@ -24,7 +24,7 @@ use Nette\Application\Responses\TextResponse;
 final class PingController extends AbstractController
 {
 
-	public function run(Request $request): IResponse
+	public function run(Request $request): Response
 	{
 		return new TextResponse('pong');
 	}
