@@ -30,7 +30,7 @@ Main goal is to provide skeleton for [contributte/api-router](https://github.com
 
 Focused on:
 
-- latest PHP 8.0
+- latest PHP 8
 - `nette/*` packages
 
 ## Demo
@@ -63,7 +63,7 @@ And take a look at:
 
 See [how to contribute](https://contributte.org/contributing.html) to this package.
 
-This package is currently maintaining by these authors.
+This package is currently maintained by these authors.
 
 <a href="https://github.com/f3l1x">
   <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
