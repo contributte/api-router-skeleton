@@ -21,7 +21,7 @@
     "contributte/di": "^0.5.0",
     "contributte/http": "^0.5.0",
     "contributte/security": "^0.5.0",
-    "contributte/utils": "^0.5.0",
+    "contributte/utils": "^0.6.0",
     "contributte/tracy": "^0.6.0",
 
     "contributte/api-router": "^5.0.0"
