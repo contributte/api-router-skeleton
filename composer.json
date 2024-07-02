@@ -30,7 +30,7 @@
     "ninjify/qa": "^0.13",
     "ninjify/nunjuck": "^0.4",
     "contributte/code-rules": "^1.1",
-    "contributte/dev": "^0.3",
+    "contributte/dev": "^0.4",
     "phpstan/phpstan": "^1.0",
     "phpstan/phpstan-deprecation-rules": "^1.0",
     "phpstan/phpstan-nette": "^1.0",
