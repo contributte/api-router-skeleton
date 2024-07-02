@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ffb91bf0b3f691505e0c9ce94cf089",
+    "content-hash": "a615f7b2942b0b19f6858ae27ba7a5a7",
     "packages": [
         {
             "name": "contributte/api-router",
@@ -2191,35 +2191,41 @@
         },
         {
             "name": "contributte/dev",
-            "version": "v0.3",
+            "version": "v0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/dev.git",
-                "reference": "2f583ab44c082d4fd09db57db3906cb0c48706e4"
+                "reference": "ad662e623a4d3d7e98b4d647eb4a6681f7c0ae1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/dev/zipball/2f583ab44c082d4fd09db57db3906cb0c48706e4",
-                "reference": "2f583ab44c082d4fd09db57db3906cb0c48706e4",
+                "url": "https://api.github.com/repos/contributte/dev/zipball/ad662e623a4d3d7e98b4d647eb4a6681f7c0ae1b",
+                "reference": "ad662e623a4d3d7e98b4d647eb4a6681f7c0ae1b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "contributte/tracy": "^0.6.0",
+                "contributte/utils": "^0.6.0",
+                "php": ">=8.1"
             },
             "require-dev": {
-                "ninjify/nunjuck": "^0.4",
-                "ninjify/qa": "^0.12"
+                "contributte/phpstan": "^0.1.0",
+                "contributte/phpunit": "^0.1.0",
+                "contributte/qa": "^0.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4.x-dev"
+                    "dev-master": "0.5.x-dev"
                 }
             },
             "autoload": {
                 "files": [
                     "src/shortcuts.php"
-                ]
+                ],
+                "psr-4": {
+                    "Contributte\\Dev\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2231,18 +2237,30 @@
                     "homepage": "https://f3l1x.io"
                 }
             ],
-            "description": "Tools for development",
+            "description": "Tools for development with Nette and Tracy",
             "homepage": "https://github.com/contributte/dev",
             "keywords": [
+                "debugger",
                 "development",
+                "functions",
                 "nette",
                 "shortcuts"
             ],
             "support": {
                 "issues": "https://github.com/contributte/dev/issues",
-                "source": "https://github.com/contributte/dev/tree/v0.3"
+                "source": "https://github.com/contributte/dev/tree/v0.4"
             },
-            "time": "2020-12-13T18:46:03+00:00"
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-09T19:56:08+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
