@@ -8,12 +8,12 @@ on:
     branches:
       - "*"
   schedule:
-    - cron: "0 8 * * 1" # At 08:00 on Monday
+    - cron: "0 8 * * 1"
 
 env:
   extensions: "json"
   cacheVersion: "1"
-  composerVersion: "v2"
+  composerVersion: "2"
   composerInstall: "composer install"
 
 jobs:
@@ -23,49 +23,21 @@ jobs:
 
     strategy:
       matrix:
-        php-versions: [ "8.0" ]
+        php-versions: [ "8.4" ]
         operating-system: [ "ubuntu-latest" ]
       fail-fast: false
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v4"
 
-      - name: "Setup PHP cache environment"
-        id: "extcache"
-        uses: "shivammathur/cache-extensions@v1"
-        with:
-          php-version: "${{ matrix.php-versions }}"
-          extensions: "${{ env.extensions }}"
-          key: "${{ env.cacheVersion }}"
-
-      - name: "Cache PHP extensions"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.extcache.outputs.dir }}"
-          key: "${{ steps.extcache.outputs.key }}"
-          restore-keys: "${{ steps.extcache.outputs.key }}"
-
-      - name: "Install PHP"
+      - name: "Setup PHP"
         uses: "shivammathur/setup-php@v2"
         with:
           php-version: "${{ matrix.php-versions }}"
           extensions: "${{ env.extensions }}"
-          tools: "composer:${{ env.composerVersion }} "
-
-      - name: "Setup problem matchers for PHP"
-        run: 'echo "::add-matcher::${{ runner.tool_cache }}/php.json"'
-
-      - name: "Get Composer cache directory"
-        id: "composercache"
-        run: 'echo "::set-output name=dir::$(composer config cache-files-dir)"'
-
-      - name: "Cache PHP dependencies"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.composercache.outputs.dir }}"
-          key: "${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}"
-          restore-keys: "${{ runner.os }}-composer-"
+          tools: "composer:${{ env.composerVersion }}"
+          cache: "composer"
 
       - name: "Validate Composer"
         run: "composer validate"
@@ -82,49 +54,21 @@ jobs:
 
     strategy:
       matrix:
-        php-versions: [ "8.0", "8.1" ]
+        php-versions: [ "8.4" ]
         operating-system: [ "ubuntu-latest" ]
       fail-fast: false
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v4"
 
-      - name: "Setup PHP cache environment"
-        id: "extcache"
-        uses: "shivammathur/cache-extensions@v1"
-        with:
-          php-version: "${{ matrix.php-versions }}"
-          extensions: "${{ env.extensions }}"
-          key: "${{ env.cacheVersion }}"
-
-      - name: "Cache PHP extensions"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.extcache.outputs.dir }}"
-          key: "${{ steps.extcache.outputs.key }}"
-          restore-keys: "${{ steps.extcache.outputs.key }}"
-
-      - name: "Install PHP"
+      - name: "Setup PHP"
         uses: "shivammathur/setup-php@v2"
         with:
           php-version: "${{ matrix.php-versions }}"
           extensions: "${{ env.extensions }}"
-          tools: "composer:${{ env.composerVersion }} "
-
-      - name: "Setup problem matchers for PHP"
-        run: 'echo "::add-matcher::${{ runner.tool_cache }}/php.json"'
-
-      - name: "Get Composer cache directory"
-        id: "composercache"
-        run: 'echo "::set-output name=dir::$(composer config cache-files-dir)"'
-
-      - name: "Cache PHP dependencies"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.composercache.outputs.dir }}"
-          key: "${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}"
-          restore-keys: "${{ runner.os }}-composer-"
+          tools: "composer:${{ env.composerVersion }}"
+          cache: "composer"
 
       - name: "Install dependencies"
         run: "${{ env.composerInstall }}"
@@ -135,59 +79,27 @@ jobs:
   tests:
     name: "Tests"
     runs-on: "${{ matrix.operating-system }}"
-    continue-on-error: "${{ matrix.php-versions == '8.1' }}"
 
     strategy:
       matrix:
-        php-versions: [ "8.0", "8.1" ]
+        php-versions: [ "8.4" ]
         operating-system: [ "ubuntu-latest" ]
       fail-fast: false
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v4"
 
-      - name: "Setup PHP cache environment"
-        id: "extcache"
-        uses: "shivammathur/cache-extensions@v1"
-        with:
-          php-version: "${{ matrix.php-versions }}"
-          extensions: "${{ env.extensions }}"
-          key: "${{ env.cacheVersion }}"
-
-      - name: "Cache PHP extensions"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.extcache.outputs.dir }}"
-          key: "${{ steps.extcache.outputs.key }}"
-          restore-keys: "${{ steps.extcache.outputs.key }}"
-
-      - name: "Install PHP"
+      - name: "Setup PHP"
         uses: "shivammathur/setup-php@v2"
         with:
           php-version: "${{ matrix.php-versions }}"
           extensions: "${{ env.extensions }}"
-          tools: "composer:${{ env.composerVersion }} "
-
-      - name: "Setup problem matchers for PHP"
-        run: 'echo "::add-matcher::${{ runner.tool_cache }}/php.json"'
-
-      - name: "Get Composer cache directory"
-        id: "composercache"
-        run: 'echo "::set-output name=dir::$(composer config cache-files-dir)"'
-
-      - name: "Cache PHP dependencies"
-        uses: "actions/cache@v2"
-        with:
-          path: "${{ steps.composercache.outputs.dir }}"
-          key: "${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}"
-          restore-keys: "${{ runner.os }}-composer-"
+          tools: "composer:${{ env.composerVersion }}"
+          cache: "composer"
 
       - name: "Install dependencies"
         run: "${{ env.composerInstall }}"
-
-      - name: "Setup problem matchers for PHPUnit"
-        run: 'echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"'
 
       - name: "Tests"
         run: "make tests"
