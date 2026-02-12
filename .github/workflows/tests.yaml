@@ -12,7 +12,7 @@ on:
 jobs:
   tester:
     name: "Tester"
-    uses: contributte/.github/.github/workflows/tester.yml@v1
+    uses: contributte/.github/.github/workflows/phpunit.yml@master
     with:
       php: "8.4"
       make: "init tests"
