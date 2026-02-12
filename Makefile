@@ -1,9 +1,11 @@
 ############################################################
 # PROJECT ##################################################
 ############################################################
-.PHONY: project install setup clean
+.PHONY: project install setup clean init
 
 project: install setup
+
+init: install setup
 
 install:
 	composer install
@@ -30,7 +32,7 @@ csf:
 	vendor/bin/codefixer app tests
 
 phpstan:
-	vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=512M app tests/toolkit
+	vendor/bin/phpstan analyse --memory-limit=512M
 
 tests:
 	vendor/bin/tester -s -p php --colors 1 -C tests

@@ -13,32 +13,32 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.4",
 
-    "contributte/application": "^0.5.0",
-    "contributte/bootstrap": "^0.6.0",
-    "contributte/cache": "^0.6.0",
-    "contributte/di": "^0.5.0",
+    "contributte/application": "^0.6.0",
+    "contributte/bootstrap": "^0.7.0",
+    "contributte/cache": "^0.7.0",
+    "contributte/di": "^0.6.0",
     "contributte/http": "^0.5.0",
     "contributte/security": "^0.5.0",
-    "contributte/utils": "^0.6.0",
-    "contributte/tracy": "^0.6.0",
+    "contributte/utils": "^0.7.0",
+    "contributte/tracy": "^0.7.0",
 
-    "contributte/api-router": "^5.0.0"
+    "contributte/api-router": "^7.0"
   },
   "require-dev": {
-    "ninjify/qa": "^0.13",
-    "ninjify/nunjuck": "^0.4",
-    "contributte/code-rules": "^1.1",
-    "contributte/dev": "^0.4",
-    "phpstan/phpstan": "^1.0",
-    "phpstan/phpstan-deprecation-rules": "^1.0",
-    "phpstan/phpstan-nette": "^1.0",
-    "phpstan/phpstan-strict-rules": "^1.0"
+    "contributte/qa": "^0.4",
+    "contributte/tester": "^0.4",
+    "contributte/phpstan": "^0.3"
   },
   "autoload": {
     "psr-4": {
       "App\\": "app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
     }
   },
   "minimum-stability": "dev",

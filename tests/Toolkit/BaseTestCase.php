@@ -1,8 +1,6 @@
-<?php
+<?php declare(strict_types = 1);
 
-declare(strict_types=1);
-
-namespace Tests\Toolkit\TestCase;
+namespace Tests\Toolkit;
 
 use Tester\TestCase;
 
