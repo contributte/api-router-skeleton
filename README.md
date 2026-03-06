@@ -2,7 +2,7 @@
 
 <p align=center>
   <a href="https://github.com/ublaboo/api-router-project/actions"><img src="https://badgen.net/github/checks/ublaboo/api-router-project/master"></a>
-  <a href="https://coveralls.io/r/ublaboo/api-router-project"><img src="https://badgen.net/coveralls/c/github/ublaboo/api-router-project"></a>
+  <a href="https://codecov.io/gh/contributte/api-router-skeleton"><img src="https://badgen.net/codecov/c/github/contributte/api-router-skeleton"></a>
   <a href="https://packagist.org/packages/ublaboo/api-router-project"><img src="https://badgen.net/packagist/dm/ublaboo/api-router-project"></a>
   <a href="https://packagist.org/packages/ublaboo/api-router-project"><img src="https://badgen.net/packagist/v/ublaboo/api-router-project"></a>
 </p>
