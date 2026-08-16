@@ -14,17 +14,28 @@ Example Nette API project using [contributte/api-router](https://github.com/cont
 composer create-project contributte/api-router-skeleton acme
 cd acme
 make init
+make project
+```
+
+`make init` and `make project` install dependencies and prepare the writable runtime directories.
+
+## Run and verify the API
+
+```bash
 make dev
 ```
 
-The development server listens on `http://localhost:8000`.
+The development server listens on <http://localhost:8000>. In another terminal, verify it:
 
-## API endpoints
+```bash
+curl http://localhost:8000/api/ping
+# pong
+```
 
-- `GET http://localhost:8000/api/ping`
-- `POST http://localhost:8000/api/login`
+## API discovery
 
-Routes are declared with `ApiRoute` annotations on controllers in `app/Controllers`.
+Routes are declared with `ApiRoute` annotations on controllers in `app/Controllers`. The `POST /api/login` example is available after the ping check.
+
 
 ## Configuration
 
