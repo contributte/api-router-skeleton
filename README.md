@@ -8,38 +8,37 @@ Example Nette API project using [contributte/api-router](https://github.com/cont
 - [Composer](https://getcomposer.org/)
 - `make` for the provided development commands
 
-## Create a project
+## Create the API Router project
+
+Create a ready-to-run project and prepare its writable directories:
 
 ```bash
 composer create-project contributte/api-router-skeleton acme
 cd acme
-make init
-make project
+make setup
 ```
 
-`make init` and `make project` install dependencies and prepare the writable runtime directories.
+Composer installs the dependencies during project creation, so no second install step is needed.
 
-## Run and verify the API
+## Run the development server
 
 ```bash
-make dev
+NETTE_DEBUG=1 NETTE_ENV=dev php -S 0.0.0.0:8000 -t www www/index.php
 ```
 
-The development server listens on <http://localhost:8000>. In another terminal, verify it:
+Passing `www/index.php` as the router lets the PHP development server handle API paths; the current `make dev` target omits it. The server listens on <http://localhost:8000>.
 
-```bash
-curl http://localhost:8000/api/ping
-# pong
-```
+The example routes are not currently reachable: the controllers declare legacy docblock annotations, while the installed `contributte/api-router` 7.x discovers PHP attributes. A request to `/api/ping` therefore returns 404 until the controllers are migrated.
 
-## API discovery
+## Find the example routes
 
-Routes are declared with `ApiRoute` annotations on controllers in `app/Controllers`. The `POST /api/login` example is available after the ping check.
+The intended `GET /api/ping` and `POST /api/login` examples are declared with legacy `ApiRoute` annotations on controllers in `app/Controllers`; see the compatibility note above before using them.
 
-
-## Configuration
+## Configure local overrides
 
 Application configuration is in `config/`. The development command sets `NETTE_DEBUG=1` and `NETTE_ENV=dev`.
+
+Local overrides are loaded from `config/config.local.neon`. The tracked `.gitignore` currently ignores `app/config/config.local.neon` instead, so add `config/config.local.neon` to your project-level ignore rules before storing secrets there.
 
 ## Development
 
